@@ -32,7 +32,7 @@ if "id_conversation" not in st.session_state:
     st.session_state.id_conversation = None
 
 if "mistral_model" not in st.session_state:
-    st.session_state["mistral_model"] = "mistral-large-latest"
+    st.session_state["mistral_model"] = "ministral-3b-2512"
 
 if "messages" not in st.session_state:
     st.session_state.messages = []  # Initialise l'historique des messages
@@ -109,7 +109,15 @@ for index, conversation in enumerate(conversation_history):
         if st.button("🗑️", key=f"delete_{id_conversation}"):  # 🔥 Bouton de suppression
             delete_conversation(db_manager, id_conversation)
             st.rerun()  # Rafraîchir après suppression
-
+# 🔹 Titre centré (zone principale)
+if not st.session_state.messages:
+  st.markdown(
+      """
+      <h1 style='text-align: center;'>👋 Bonjour, que puis-je faire pour vous ?</h1>
+      <p style='text-align: center; color: gray;'>Posez-moi une question sur vos recettes ou vos repas.</p>
+      """,
+      unsafe_allow_html=True,
+  )
 # 🔹 Affichage des messages précédents dans l'interface
 for message in st.session_state.messages:
     timestamp = message["timestamp"]
@@ -219,12 +227,13 @@ if prompt := st.chat_input("Dîtes quelque-chose"):
                 # Comment devenir une meilleure personne dans la vie ?
                 output_tokens = 0
                 temp_stream = [
-                    chunk.data.choices[0].delta.content for chunk in stream_response
+                    chunk.data.choices[0].delta.content for chunk in stream_response if chunk.data.choices[0].delta.content
                 ]
                 # Calculer les tokens pour ce morceau de réponse
                 temp_output_token = sum(
                     [mistral.count_output_tokens(chunk) for chunk in temp_stream]
                 )
+                
                 reponse = " ".join(temp_stream)
 
                 if response == "Injection":
