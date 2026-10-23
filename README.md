@@ -1,12 +1,3 @@
----
-title: Image To Text App
-emoji: 📹
-colorFrom: blue
-colorTo: red
-sdk: streamlit
-app_file: main.py
-pinned: false
----
 
 # Nutrigénie
 
