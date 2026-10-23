@@ -12,7 +12,7 @@
 
 ## 🚀 Démo en ligne
 
-Accédez à Nutrigénie ici : [Nutrigénie sur Hugging Face Spaces](https://huggingface.co/spaces/Sahm269/NutrigenieLLM)
+Accédez à Nutrigénie ici : [Nutrigénie sur Streamlit Cloud](https://llmproject-sehpqzftcc27ha2ptfzsxi.streamlit.app/)
 
 ## 📁 Installation locale (optionnel)
 
