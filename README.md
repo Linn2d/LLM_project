@@ -45,7 +45,7 @@ streamlit run main.py
 
 - **Python** : Langage principal pour la logique de l'application.
 - **Streamlit** : Framework pour créer des applications web interactives.
-- **Hugging Face Spaces** : Hébergement de l'application.
+- **Streamlit Cloud** : Hébergement de l'application.
 - **SQLite/ChromaDB** : Gestion de la base de données pour les conversations et les recettes.
 - **RAG (Retrieval-Augmented Generation)** : Pour améliorer la précision des réponses.
 
