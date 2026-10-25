@@ -20,7 +20,7 @@ Si vous souhaitez cloner et exécuter le projet en local :
 
 ```bash
 # Clonez le dépôt
-git clone https://github.com/Sahm269/LLM_project.git
+git clone https://github.com/Linn2d/LLM_project.git
 cd LLM_project
 
 # Créez un environnement virtuel
