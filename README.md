@@ -40,6 +40,11 @@ streamlit run main.py
 2. Engagez une conversation avec Nutrigénie en posant des questions sur la nutrition.
 3. Recevez des conseils personnalisés et des suggestions de recettes.
 
+## **Présentation de quelques modules de l'application**
+
+![Diagramme architecture](screenshots/Chatbot.png)
+![Diagramme architecture](screenshots/Mealplan.png)
+![Diagramme architecture](screenshots/Metriques.png)
 
 ## 👾 Technologies utilisées
 
